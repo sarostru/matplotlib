@@ -266,6 +266,7 @@ class Patch3D(Patch):
         self._segment3d = [juggle_axes(x, y, z, zdir) \
                 for ((x, y), z) in zip(verts, zs)]
         self._facecolor3d = Patch.get_facecolor(self)
+        self._facecolor2d = self._facecolor3d
 
     def get_path(self):
         return self._path2d
